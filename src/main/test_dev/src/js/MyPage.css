@@ -1,0 +1,157 @@
+.metee_mypage_side_wraper{
+	display: flex;
+    flex-direction: column;
+    width: 200px;
+    background: #ffffff;
+    padding: 28px 5px 0px 5px;
+    border-radius: 15px;
+    box-shadow: 2px 8px 12px 0 rgb(20 20 20 / 2%);
+}
+
+.metee_mypage_side_wraper button{
+	border: none;
+    padding: 8px 12px;
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 5px;
+    background-color: #59cf92;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.metee_mypage_side_wraper button:hover{
+	background-color: #ffffff;
+	border:1px solid #59cf92;
+}
+
+.menu_title_box_span{
+	padding-left: 5px;
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+.mentor_join_list_title_wraper {
+	width: 580px;
+	height: 54px;
+	border-radius: 28px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: rgba(29, 192, 120, .12);
+	border: 1px solid rgba(29, 192, 120, .24);
+}
+
+.mentor_join_list_title_wraper span {
+	color: #1dc078;
+	font-weight: bold;
+}
+
+.mentor_join_list_main_container {
+	height: 500px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-top: 90px;
+	height: 100vh;
+}
+
+.mentor_join_list_main_wraper {
+	display: flex;
+    border-radius: 20px;
+    padding: 50px;
+    box-shadow: -1px 1px 17px 10px whitesmoke;
+    min-height: 90vh;
+	
+}
+
+
+#select_video_list, #select_payment_list, #select_coupone_list, #select_mypage, #selet_my_upload_lecture,#change_my_info_btn
+,#select_my_chart{
+	background-color: #fafafa;
+	color: #1dc078;
+	border: 1px solid #1dc078;
+	cursor:pointer;
+}
+
+.metee_mypage_main_wraper_join_style{
+	width: 1190px;
+    background: #FFFFFF;
+    padding: 20px 8px 8px 8px;
+    justify-content: center;
+    border-radius: 15px;
+    box-shadow: 2px 8px 12px 0 rgb(20 20 20 / 2%);
+    margin: 0 auto;
+}
+
+.myPageInputBox{
+	    display: block;
+    position: relative;
+    width: 100%;
+    height: 51px;
+    border: solid 1px #dadada;
+    padding: 10px 14px 10px 14px;
+    background: whitesmoke;
+    box-sizing: border-box;
+    vertical-align: top;
+}
+
+.myPageInputBox:focus{
+	border-color:#1dc078;
+	background: #fff;
+}
+
+.myPageInfutTitle{
+	 margin: 19px 0 8px;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+
+#myPage_input_form {
+    display: flex;
+    flex-direction: column;
+    width:70%;
+}
+
+.myPage_profile_img_box{
+	display:flex;
+	align-items:flex-end;
+}
+
+.profile_correction input{
+	border:none;
+	padding:8px 12px;
+	margin-top:20px;
+	cursor:pointer;
+	border-radius:5px;
+	background-color:#1dc078;
+	color:white;
+	font-size: 15px;
+	font-weight: 600;
+}
+
+#image_container img{
+	width:120px;
+	height:130px;
+}
+
+.address_btn{
+	position: absolute;
+    right: 0;
+    margin-top: 612px;
+    margin-right: 1210px;
+    font-size:25px;
+    color:red;
+}
+
+.address_btn_mentor{
+	position: absolute;
+    right: 0;
+    margin-top: 585px;
+    margin-right: 1215px;
+    font-size:25px;
+    color:red;
+}
+.delete-img{
+    margin-left:300px;
+}
