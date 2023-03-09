@@ -2,6 +2,8 @@ import "./join.css";
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import Swal from "sweetalert2";
+import logo from '../../images/logo.png';
+import { useNavigate } from "react-router-dom";
 
 function Join() {
   const [email, setInputEmail] = useState("");
@@ -18,9 +20,19 @@ function Join() {
   let [pass_, setPass] = useState();
   let [nickname_, setNickName] = useState();
 
+  const navigate = useNavigate();
+
   const handleInputEmail = (e) => {
     setInputEmail(e.target.value);
   };
+
+  const clickBtn = (params, e) => {
+    if(params === "/") {
+        navigate('/');
+    } else if(params === "Join") {
+        navigate('/join');
+    }
+};
 
   const handleInputPw = (e) => {
     setInputPw(e.target.value);
@@ -174,19 +186,8 @@ function Join() {
   return (
 	<div className="JoinForm">
       <div className="navLogo" onClick={(e) => {clickBtn("/", e)}}>
-        <span className="navLogo">JOB-HUNTER </span>
+        <img src={logo} alt="홈페이지 로고" className="logo_header"/>
       </div>
-	  <div className="InputId">
-	  	<input type="text" path="email" placeholder="이메일" id="email" name="email" value={email} onChange={handleInputEmail} onKeyUp={idCheck}/>
-      <div style={ id_ == 0 ? {display:"block"} : {display:"none"}}>아이디가 중복됩니다</div>
-	  </div>
-	  <div className="InputPw">
-	  	<input type="password" path="pass" placeholder="비밀번호" id="pass" name="pass" value={pass} onChange={handleInputPw} />
-	  </div>
-	  <div className="InputPwCheck">
-	  	<input type="password" path="pass2" placeholder="비밀번호 확인" id="pass2" name="pass2" value={pass2} onChange={handleInputPw2} onKeyUp={pwCheck} />
-      <div style={ pass_ == 0 ? {display:"block"} : {display:"none"}}>비밀번호가 일치하지 않습니다</div>
-	  </div>
 	  {/* <div className="InputName">
 	  	<input type="text" path="name" placeholder="이름" id="name" name="name" value={name} onChange={handleInputName} />
 	  </div> */}
@@ -194,9 +195,8 @@ function Join() {
 	  	<input type="text" path="nickname" placeholder="닉네임" id="nickname" name="nickname" value={nickname} onChange={handleInputnickname} onKeyUp={nickCheck} />
       <div style={ nickname_ == 0 ? {display:"block"} : {display:"none"}}>닉네임이 중복됩니다</div>
 	  </div>
-	  <div className="InputBirth">
+    <div className="InputBirth">
 		<div className="Birth">
-			<span>생년월일</span>
 		</div>
 		<div className="InputBirthForm">
 			<input type="text" maxLength="8" onChange={handleInputBirth} id="birth" name="birth" value={birth} placeholder="생년월일 (8자)" />
@@ -220,7 +220,7 @@ function Join() {
 	  </div>
 	  <div className="InputSex">
 		<select name="sex" onChange={handleInputSex}>
-			<option value="">성별</option>
+			<option value="">성별을 선택해주세요</option>
 			<option value="M">남</option>
 			<option value="W">여</option>
 			<option value="N">선택 안함</option>
@@ -229,18 +229,20 @@ function Join() {
 	  <div className="InputPhone">
 	  	<input type="text" path="phone" name="phone" value={phone} placeholder="전화번호" onChange={handleInputPhone} />
 	  </div>
-	  <div className="JoinNextBtn" onClick={onClickJoin}>가입하기</div>
+    <div className="InputId">
+	  	<input type="text" path="email" placeholder="이메일" id="email" name="email" value={email} onChange={handleInputEmail} onKeyUp={idCheck}/>
+      <div style={ id_ == 0 ? {display:"block"} : {display:"none"}}>아이디가 중복됩니다</div>
+	  </div>
+    <div className="InputPw">
+	  	<input type="password" path="pass" placeholder="비밀번호" id="pass" name="pass" value={pass} onChange={handleInputPw} />
+	  </div>
+	  <div className="InputPwCheck">
+	  	<input type="password" path="pass2" placeholder="비밀번호 확인" id="pass2" name="pass2" value={pass2} onChange={handleInputPw2} onKeyUp={pwCheck} />
+      <div style={ pass_ == 0 ? {display:"block"} : {display:"none"}}>비밀번호가 일치하지 않습니다</div>
+	  </div>
+	  <div className="LoginBtn" onClick={onClickJoin}>가입하기</div>
 	</div>
   )
 }
-
-const clickBtn = (params, e) => {
-    console.log(params);
-    if(params == "/") {
-        document.location.href = "/";
-    } else if(params == "Join") {
-        document.location.href = "/join";
-    }
-};
 
 export default Join;

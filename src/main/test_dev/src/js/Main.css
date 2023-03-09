@@ -1,3 +1,25 @@
+@font-face {
+  font-family: 'Pretendard-Regular';
+  src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+}
+@font-face {
+  font-family: 'Pretendard-Bold';
+  src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Bold.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Pretendard-Medium';
+  src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Medium.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+}
+
 .banner_box {
   margin-top: 50px;
   display: flex;
@@ -6,7 +28,7 @@
 }
 
 .bannerImg {
-  width: 1000px;
+  width: 450px;
 }
 
 .search_container {
@@ -31,16 +53,16 @@
 .serach_input {
   width: 543px;
   height: 60px;
-  padding-left: 8px;
   border-radius: 10px;
-  border: #ffff00;
-  background-color: #00aa;
+  border: solid;
+  margin-top: 20px;
+  background-color: #4F85E8;
   display: flex;
   align-items: center;
 }
 
 .serach_input input {
-  border-radius: 3px 0px 0px 3px;
+  font-family: 'Pretendard-Medium';
   width: 580px;
   height: 54px;
   border: #00aa;
@@ -49,17 +71,8 @@
   font-size: 15px;
 }
 
-input:focus {
-  transition: 0.5s all;
-  outline: none !important;
-  border-color: #d6a8e9;
-  box-shadow: 0 0 15px #d6a8e9;
-}
-
-
-
 .serach_input ::placeholder {
-  color: black;
+  color: lightgray;
 }
 
 .search_submit {
@@ -78,8 +91,26 @@ input:focus {
   color: #fff;
 }
 
+.input {
+  font-size: 15px;
+  width: 450px;
+  height: 50px;
+  border-radius: 10px;
+  border: solid;
+  margin-top: 30px;
+  border-color: #e6e8ea;
+  border-width: 0.0789em;
+  font-family: 'Pretendard-Regular';
+  letter-spacing: -0.03em;
+  padding-left: 1em;
+  transition: 0.4s all;
+  outline-color: #4F85E8;
+}
+
 .banner_text{
-  font-size: 28px;
+  color: #2F353E;
+  font-family: 'Pretendard-Bold';
+  font-size: 25px;
 }
 .banner_text2{
   font-size: 28px;

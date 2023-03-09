@@ -2,17 +2,25 @@ import React, { useState, useEffect, useRef } from "react";
 import "./login.css";
 import axios from "axios";
 import Swal from "sweetalert2";
+import logo from '../../images/logo.png';
+import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 
 function Login() {
     const [email, setInputEmail] = useState("");
     const [pass, setInputPw] = useState("");
+    const navigate = useNavigate();
 
     const emailRef = useRef("");
     const passRef = useRef("");
 
     const handleInputEmail = (e) => {
         setInputEmail(e.target.value);
+    };
+
+    const clickLogo = () => {
+        navigate('/');
     };
 
     const handleInputPw = (e) => {
@@ -91,7 +99,7 @@ function Login() {
         <div className="LoginForm">
             <div className="navLogo" onClick={clickLogo}>
                 <span className="navLogo">
-                    JOB-HUNTER </span>
+                    <img src={logo} alt="홈페이지 로고" className="logo_header"/> </span>
             </div>
             <div className="InputId">
                 <input
@@ -123,28 +131,24 @@ function Login() {
             <div className="LoginOption">
                 <ul className="option-list">
                     <li className="list-item-text">
-                        <a href="/findId" id="findId">
+                        <Link to="/findId" id="findId">
                             아이디 찾기
-                        </a>
+                        </Link>
                     </li>
                     <li className="list-item-text">
-                        <a href="/findPw" id="findPw">
+                        <Link to="/findPw" id="findPw">
                             비밀번호 찾기
-                        </a>
+                        </Link>
                     </li>
                     <li className="list-item-text">
-                        <a href="/join" id="signUp">
+                        <Link to="/join" id="signUp">
                             회원가입
-                        </a>
+                        </Link>
                     </li>
                 </ul>
             </div>
         </div>
     );
 }
-
-const clickLogo = () => {
-    document.location.href = "/";
-};
 
 export default Login;

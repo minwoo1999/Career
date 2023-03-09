@@ -1,6 +1,7 @@
 import "./header.css"
-
 import React, { useState, useEffect } from 'react';
+import logo from '../../images/logo2.png';
+import { Link } from "react-router-dom";
 
 function Header() {
 	const [isLogin, setIsLogin] = useState(false); //로그인 관리
@@ -19,14 +20,15 @@ function Header() {
 		<div className="Header">
 			<nav className="navbar">
 				<div className="navLogo" onClick={clickLogo}>
-					<span className="navLogo">JOB </span>
-					<span className="navLogo" id="LogoColor">HUNTER</span>
+					<img src={logo} alt="홈페이지 로고" className="logo"/>
+					{/* <span className="navLogo">JOB </span>
+					<span className="navLogo" id="LogoColor">HUNTER</span> */}
 				</div>
 				<ul className="navMenu">
 					{/* 로그인 후 메뉴 표시 */}
 					{isLogin ? <li><a className="menu" href="/mypage">{"마이페이지"}</a></li> : <li></li>}
-					{isLogin ? (<li><a className="menu" onClick={() => { sessionStorage.clear() }} href="/">{'로그아웃'}</a></li>)
-						: (<li><a className="menu" href="/login">{'로그인'}</a></li>)}
+					{isLogin ? (<li><Link className="menu" onClick={() => { sessionStorage.clear() }} to="/">{'로그아웃'}</Link></li>)
+						: (<li><Link className="menu" to="/login">{'로그인'}</Link></li>)}
 				</ul>
 			</nav>
 		</div>
