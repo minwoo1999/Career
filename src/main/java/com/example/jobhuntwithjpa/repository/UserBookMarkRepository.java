@@ -19,4 +19,6 @@ public interface UserBookMarkRepository extends JpaRepository<UserBookMark,Long>
 
     @Query("select b from UserBookMark b join fetch b.user u where u.userId= :user_id")
     List<UserBookMark> findAllWithUser(long user_id);
+
+    UserBookMark findUserBookMarkByUserUserIdAndBookMarkName(@Param("user_id") long user_id,@Param("bookMarkName") String bookMarkName);
 }

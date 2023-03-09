@@ -91,8 +91,9 @@ public class UserService {
     public List<UserAndBookmarkResponseDto> getMypage() {
         String username = this.getMyUserWithAuthorities().get().getUsername();
 
-
+        System.out.println("asd"+username);
         List<User> userByname = userRepository.findUserListByUsername(username);
+        System.out.println("asd"+userByname);
 
 //        for (UserBookMark userBookMark : allWithUser) {
 //            System.out.println(userBookMark.getUser().getUserId());

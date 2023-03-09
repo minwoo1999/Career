@@ -3,6 +3,7 @@ package com.example.jobhuntwithjpa.controller;
 
 import com.example.jobhuntwithjpa.Entity.UserBookMark;
 import com.example.jobhuntwithjpa.Service.BookMarkService;
+import com.example.jobhuntwithjpa.Service.CustomUserDetailsService;
 import com.example.jobhuntwithjpa.dto.ResponseMessage;
 import com.example.jobhuntwithjpa.dto.UserAndBookmarkResponseDto;
 import com.example.jobhuntwithjpa.dto.UserBookMarkRequestDto;
@@ -14,6 +15,8 @@ import com.example.jobhuntwithjpa.dto.UserDto;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.web.bind.annotation.*;
 
 
@@ -52,30 +55,48 @@ public class UserController {
 
 
     @PostMapping("/mypage")
+    @PreAuthorize("hasAnyRole('USER', 'ADMIN')")
     public List<UserAndBookmarkResponseDto> userMypage(){
-
+        System.out.println("들어오긴해 ?");
         List<UserAndBookmarkResponseDto> mypage = userService.getMypage();
-
+        System.out.println("dd"+mypage);
         return mypage;
 
     }
 
+    @GetMapping("/home")
+    @PreAuthorize("hasAnyRole('USER', 'ADMIN')")
+    public List<UserAndBookmarkResponseDto> userhome(){
+
+        List<UserAndBookmarkResponseDto> home = userService.getMypage();
+
+
+        return home;
+
+    }
+
     @PostMapping("/bookmark/save")
+    @PreAuthorize("hasAnyRole('USER', 'ADMIN')")
     public ResponseEntity<ResponseMessage> bookMarkSave(@RequestBody UserBookMarkRequestDto userBookMarkRequestDto){
 
-        bookMarkService.bookmarkSave(userBookMarkRequestDto);
+
+        int result = bookMarkService.bookmarkSave(userBookMarkRequestDto);
 
         return ResponseEntity.ok().body(ResponseMessage.builder()
                 .message("즐겨찾기 성공")
+                .data(result)
                 .build());
     }
+    @PreAuthorize("hasAnyRole('USER', 'ADMIN')")
     @DeleteMapping("/bookmark/delete/{user_bookmark_id}")
     public ResponseEntity<ResponseMessage> bookMarkDelete(@PathVariable long user_bookmark_id){
+
 
         bookMarkService.bookMarkDelete(user_bookmark_id);
 
         return ResponseEntity.ok().body(ResponseMessage.builder()
                 .message("즐겨찾기 삭제 성공")
+                .data(1)
                 .build());
     }
 

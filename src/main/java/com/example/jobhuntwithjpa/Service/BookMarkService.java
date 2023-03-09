@@ -24,27 +24,40 @@ public class BookMarkService {
     private final UserRepository userRepository;
 
     @Transactional
-    public void bookmarkSave(UserBookMarkRequestDto userBookMarkRequestDto) {
-
+    public int bookmarkSave(UserBookMarkRequestDto userBookMarkRequestDto) {
+        User user = userService.getMyUserWithAuthorities().get();
+        userBookMarkRequestDto.setUser_id(user.getUserId());
         User userEntity = userRepository.findById(userBookMarkRequestDto.getUser_id()).get();
-        /**
-         * 넘어온 userId 값으로 양방향 연관관계 둘다 저장해주기
-         */
-        UserBookMark userBookMark=UserBookMark.builder()
-                .bookMarkImg(userBookMarkRequestDto.getBookMarkImg())
-                .bookMark_Start_Date(userBookMarkRequestDto.getBookMark_Start_Date())
-                .bookMark_End_Date(userBookMarkRequestDto.getBookMark_End_Date())
-                .bookMarkName(userBookMarkRequestDto.getBookMarkName())
-                .company_link(userBookMarkRequestDto.getCompany_link())
-                .id(userBookMarkRequestDto.getUser_bookmark_id())
-                .user(userEntity)
-                        .build();
-        /**
-         * userEntity도 설정해주기
-         */
-        userBookMark.setUser(userEntity);
 
-        userBookMarkRepository.save(userBookMark);
+
+        UserBookMark userBookMarkByUserUserIdAndbookMarkName = userBookMarkRepository.findUserBookMarkByUserUserIdAndBookMarkName(userBookMarkRequestDto.getUser_id(),userBookMarkRequestDto.getBookMarkName());
+
+
+        if (userBookMarkByUserUserIdAndbookMarkName!=null){
+            return 2; // 이미있는 즐겨찾기
+        }else{
+            /**
+             * 넘어온 userId 값으로 양방향 연관관계 둘다 저장해주기
+             */
+            UserBookMark userBookMark=UserBookMark.builder()
+                    .bookMarkImg(userBookMarkRequestDto.getBookMarkImg())
+                    .bookMark_Start_Date(userBookMarkRequestDto.getBookMark_Start_Date())
+                    .bookMark_End_Date(userBookMarkRequestDto.getBookMark_End_Date())
+                    .bookMarkName(userBookMarkRequestDto.getBookMarkName())
+                    .company_link(userBookMarkRequestDto.getCompany_link())
+                    .id(userBookMarkRequestDto.getUser_bookmark_id())
+                    .user(userEntity)
+                    .build();
+            /**
+             * userEntity도 설정해주기
+             */
+            userBookMark.setUser(userEntity);
+            userBookMarkRepository.save(userBookMark);
+            return 1;
+        }
+
+
+
     }
     @Transactional
     public void bookMarkDelete(long bookmarkId){
