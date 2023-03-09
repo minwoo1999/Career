@@ -1,3 +1,26 @@
+@font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+  }
+  @font-face {
+    font-family: 'Pretendard-Bold';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Bold.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'Pretendard-Medium';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+  }
+
+  
 .metee_mypage_side_wraper{
 	display: flex;
     flex-direction: column;
@@ -6,6 +29,13 @@
     padding: 28px 5px 0px 5px;
     border-radius: 15px;
     box-shadow: 2px 8px 12px 0 rgb(20 20 20 / 2%);
+}
+
+.Card1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
 }
 
 .metee_mypage_side_wraper button{
@@ -74,36 +104,47 @@
 }
 
 .metee_mypage_main_wraper_join_style{
-	width: 1190px;
-    background: #FFFFFF;
-    padding: 20px 8px 8px 8px;
+    margin-top: 40px;
+    display: flex;
+    width: 100% ;
+    flex-direction: column;
+    align-items: center;
+}
+
+.c1image {
+    width: 100%;
+    display: flex;
     justify-content: center;
-    border-radius: 15px;
-    box-shadow: 2px 8px 12px 0 rgb(20 20 20 / 2%);
-    margin: 0 auto;
+    align-items: center;
+    flex-wrap:wrap;
 }
 
 .myPageInputBox{
-	    display: block;
-    position: relative;
-    width: 100%;
-    height: 51px;
-    border: solid 1px #dadada;
-    padding: 10px 14px 10px 14px;
-    background: whitesmoke;
-    box-sizing: border-box;
-    vertical-align: top;
+    font-size: 15px;
+    width: 450px;
+    height: 50px;
+    border-radius: 10px;
+    border: solid;
+    margin-top: 10px;
+    border-color: #e6e8ea;
+    border-width: 0.0789em;
+    font-family: 'Pretendard-Regular';
+    letter-spacing: -0.03em;
+    padding-left: 1em;
+    transition: 0.4s all;
+    outline-color: #4F85E8;
 }
 
-.myPageInputBox:focus{
-	border-color:#1dc078;
-	background: #fff;
+.myPageInputBox:focus-visible {
+    outline: none;
 }
 
 .myPageInfutTitle{
-	 margin: 19px 0 8px;
-    font-size: 14px;
-    font-weight: 700;
+    font-family: 'Pretendard-Bold';
+    display: block;
+	margin: 19px 0 8px;
+    font-size: 30px;
+    letter-spacing: -.3px;
 }
 
 

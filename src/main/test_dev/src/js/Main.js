@@ -19,19 +19,16 @@ function Main() {
     )
 }
 
-// console.log(news);
 let date = new Date().getMonth() + 1 + "/" + new Date().getDate()
-// console.log(date);
-
-const ID = sessionStorage.getItem("tokenId")
-const refreshTokenId = sessionStorage.getItem("refreshTokenId")
-
-console.log(ID);
-console.log(refreshTokenId);
-
 
 function MainContainer() {
     const [message, setMessage] = useState('');
+    const [ID, setID] = useState(() => {
+        return sessionStorage.getItem("tokenId");
+    })
+    const [refreshTokenId, setRefreshTokenId] = useState(() => {
+        return sessionStorage.getItem("refreshTokenId");
+    })
 
     const [ch, setCh] = useState(null);
 
@@ -43,17 +40,38 @@ function MainContainer() {
     const [user, setUser] = useState("");
     const [userBookmark, setUserBookmark] = useState("");
     const [isResult, setResult] = useState(true);
+    const [userCompany, setUserCompany] = useState([]);
+    const list = [];
 
     function callback(str) {
         setMessage(str);
     }
 
+    useEffect(() => {
+        if (ID) {
+            axios.get('/api/mypage', {
+                headers: {
+                    Authorization: `Bearer ${sessionStorage.getItem("tokenId")}`,
+                }
+            })
+            .then((res) => {
+                const data = res.data[0].bookmark;
+                for (let k of data) {
+                    list.push(k.bookMarkName);
+                }
+            })
+            .then(() => {
+                setUserCompany(list);
+            })
+        }
+    }, [])
+
     const run = () => {
         axios
-            .get("/home", {
+            .get("/api/home", {
                 headers: {
-                    Authorization: `${sessionStorage.getItem("tokenId")}`,
-                    refreshTokenId: `${sessionStorage.getItem("refreshTokenId")}`
+                    Authorization: `Bearer ${sessionStorage.getItem("tokenId")}`,
+                    refreshTokenId: `Bearer ${sessionStorage.getItem("refreshTokenId")}`
                 }
             })
             .then((res) => {
@@ -64,12 +82,13 @@ function MainContainer() {
                 //     // console.log(res.data)
 
                 // } 
+                // console.log("여기",res)
                 if (res.data[0] == 'false') {
                     sessionStorage.removeItem("tokenId")
-                    console.log(res.data);
-                    axios.get("/refresh", {
+                    // console.log(res.data);
+                    axios.get("/api/refresh", {
                         headers: {
-                            refreshTokenId: `${sessionStorage.getItem("refreshTokenId")}`
+                            refreshTokenId: `Bearer ${sessionStorage.getItem("refreshTokenId")}`
                         }
                     }).then((res) => {
                         console.log(res.data);
@@ -185,7 +204,11 @@ function MainContainer() {
             // console.log(date2);
 
             if(date1 >= date2){
-                return <ItemBox name={item[0]} state={item[1].state} content={item[1].content} position={item[1].position} plan={item[1].plan} link={item[1].link} img={item[1].img} />
+                if (userCompany.includes(item[0])) {
+                    return<p> {item[0]}은 이미 즐겨찾기 완료 </p>
+                } else {
+                    return <ItemBox name={item[0]} state={item[1].state} content={item[1].content} position={item[1].position} plan={item[1].plan} link={item[1].link} img={item[1].img} />
+                }
             }
             // return <ItemBox name={item[0]} state={item[1].state} content={item[1].content} position={item[1].position} plan={item[1].plan} link={item[1].link} img={item[1].img} />
             
@@ -197,7 +220,9 @@ function MainContainer() {
     }
 
     const bookmark = (e, companyname, plan, img, link) => {
-        if (ID == null) {
+        // console.log(`ID: ${ID}`)
+        if (!ID) {
+            console.log("ID가 없어요!")
             Swal.fire({
                 title: '즐겨찾기 기능은 로그인 후 가능합니다!',
                 text: '로그인 페이지로 이동하겠습니까?',
@@ -219,47 +244,47 @@ function MainContainer() {
                 }
             });
         }
-        if (ID != null) {
-            var start, end
+        else {
+            let start = plan.split('~')[0];
+            let end = plan.split('~')[1];
+            console.log("ㅎㄴㅇㅎㅁㅇㄴ", ID, companyname, start, end, img, link);
 
-            start = plan.split('~')[0]
-            end = plan.split('~')[1]
-
-            console.log(ID, companyname, start, end, img, link);
-
-            axios
-                .post("/company-save",
+            axios.post("/api/bookmark/save",
                     {
-                        companyname: companyname,
-                        companyimg: img,
-                        company_start: start,
-                        company_end: end,
-                        company_link: link
-
-                    }, { headers: { Authorization: `${sessionStorage.getItem("tokenId")}` } }
-                ).then(result => {
-                    if (result.data == 1) {
-                        Swal.fire({
-                            icon: 'success',
-                            title: '즐겨찾기 Success',
-                            // timer: 100000,
-                        })
-                    } else if (result.data == 2) {
+                        bookMarkName: companyname,
+                        bookMarkImg: img,
+                        bookMark_Start_Date: start,
+                        bookMark_End_Date: end,
+                        company_link: link,
+                    }, 
+                    { 
+                        headers: { 
+                            Authorization: `Bearer ${sessionStorage.getItem("tokenId")}` 
+                        } 
+                }).then((res) => {
+                    console.log(res);
+                    if (res.data.data === 2) { // 즐겨찾기가 되어있을 경우
                         Swal.fire({
                             icon: 'error',
                             title: '이미 즐겨찾기가 되어있습니다.',
                             // timer: 100000,
                         })
-                    } else {
+                    }
+                    else if (res.data.data === 1) { // 처음으로 즐겨찾기를 하는 경우
+                        Swal.fire({
+                            icon: 'success',
+                            title: '즐겨찾기 Success',
+                            // timer: 100000,
+                        })
+                    }
+                    else { // 그 외에 오류사항들
                         Swal.fire({
                             icon: 'error',
                             title: '로그인 후 이용해주세요',
                             // timer: 100000,
                         })
                     }
-
-
-                });
+                })
         }
 
     }
@@ -271,12 +296,14 @@ function MainContainer() {
 
             <input type="text" className="input" placeholder="회사를 입력하세요" onChange={event => { setSearch(event.target.value) }} />
 
+            {userCompany.map((item) => {
+                console.log("test", item);
+            })}
+
             <br />
             <div className="SearchResultForm">
                 {items}
             </div>
-
-
         </div>
     )
 

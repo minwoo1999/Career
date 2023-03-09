@@ -45,9 +45,9 @@ function Login() {
             passRef.current.focus();
         } else {
             axios
-                .post("/login", {
-                    email: email,
-                    pass: pass,
+                .post("/api/login", {
+                    username: email,
+                    password: pass,
                 })
                 .then((res) => {
                     console.log(res.data);
@@ -68,12 +68,11 @@ function Login() {
                         );
 
 
-                    } else if (res.data !=null ) {
+                    } else if (res.data !== null ) {
                         // id, pw 모두 일치 userId = userId1, msg = undefined
                         // console.log(res.data);
-                        sessionStorage.setItem("tokenId", res.data.split("/")[0]); 
-
-                        sessionStorage.setItem("refreshTokenId", res.data.split("/")[1]); // sessionStorage에 id를 user_id라는 key 값으로 저장
+                        sessionStorage.setItem("tokenId", res.data.token); 
+                        sessionStorage.setItem("refreshTokenId", res.data.refresh_token); // sessionStorage에 id를 user_id라는 key 값으로 저장
 
                         console.log("======================", "로그인 성공");
                         Swal.fire({

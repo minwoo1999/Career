@@ -175,23 +175,26 @@
 }
 
 .container {
-  margin: 50px auto;
+  margin-top: 50px;
   width: 560px;
 }
 
 .card {
   background-color: #fff;
   border-radius: 2px;
-  box-shadow: 0 2px 3px rgba(0, 0, 0, .1);
   margin-bottom: 65px;
-  width: 85%;
+  width: 90%;
+  border-radius: 10px;
+  border: solid;
+  border-width: 1px;
+  border-color: rgba(201, 201, 201, 0.514);
 }
 
 .card-media {
   float: left;
   padding: 0 0 25px 25px;
   position: relative;
-  width: 145px;
+  width: 200px;
 }
 
 .card-media-img {
@@ -199,6 +202,10 @@
   float: left;
   margin-top: -25px;
   position: relative;
+  border-radius: 8px;
+  padding: 10px;
+  background-color: white;
+  width: 100%;
 }
 
 .card-media-preview {
@@ -252,6 +259,8 @@
 }
 
 .card-body {
+  display: flex;
+  align-items: center;
   float: left;
   padding: 25px 25px 25px 20px;
   width: 415px;
@@ -259,22 +268,26 @@
 
 .card-body-heading {
   color: #6f6f6f;
+  font-family: 'Pretendard-Bold';
   display: inline-block;
-  font-size: 26px;
+  font-size: 20px;
 }
 
 .card-body-options {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
   float: right;
 }
 
 .card-body-option {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   cursor: pointer;
-  display: inline-block;
-  position: relative;
   margin-left: 5px;
 }
-
-
 
 .card-button {
   color: #9C948A;
@@ -303,12 +316,8 @@
   background-color: #F44336;
 }
 
-.card-button-link:hover {
-  color: #444;
-}
-
-.card-button-link:hover svg {
-  fill: #444;
+.card-button-link {
+  font-family: 'Pretendard-Medium';
 }
 
 .card-button-icon {
