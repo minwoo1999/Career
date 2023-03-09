@@ -66,6 +66,10 @@ function MainContainer() {
         }
     }, [])
 
+    useEffect(() => {
+
+    }, [ID]);
+
     const run = () => {
         axios
             .get("/api/home", {
@@ -82,7 +86,7 @@ function MainContainer() {
                 //     // console.log(res.data)
 
                 // } 
-                // console.log("여기",res)
+                // console.log("여기",res)av
                 if (res.data[0] == 'false') {
                     sessionStorage.removeItem("tokenId")
                     // console.log(res.data);
@@ -204,11 +208,7 @@ function MainContainer() {
             // console.log(date2);
 
             if(date1 >= date2){
-                if (userCompany.includes(item[0])) {
-                    return<p> {item[0]}은 이미 즐겨찾기 완료 </p>
-                } else {
-                    return <ItemBox name={item[0]} state={item[1].state} content={item[1].content} position={item[1].position} plan={item[1].plan} link={item[1].link} img={item[1].img} />
-                }
+                return <ItemBox name={item[0]} state={item[1].state} content={item[1].content} position={item[1].position} plan={item[1].plan} link={item[1].link} img={item[1].img} />
             }
             // return <ItemBox name={item[0]} state={item[1].state} content={item[1].content} position={item[1].position} plan={item[1].plan} link={item[1].link} img={item[1].img} />
             
@@ -219,8 +219,9 @@ function MainContainer() {
         setUser(event.target.value);
     }
 
-    const bookmark = (e, companyname, plan, img, link) => {
+    const bookmark = (e, id, companyname, plan, img, link) => {
         // console.log(`ID: ${ID}`)
+        console.log(id);
         if (!ID) {
             console.log("ID가 없어요!")
             Swal.fire({
@@ -247,15 +248,16 @@ function MainContainer() {
         else {
             let start = plan.split('~')[0];
             let end = plan.split('~')[1];
-            console.log("ㅎㄴㅇㅎㅁㅇㄴ", ID, companyname, start, end, img, link);
-
-            axios.post("/api/bookmark/save",
+            // console.log("ㅎㄴㅇㅎㅁㅇㄴ", ID, companyname, start, end, img, link);
+            if (window.confirm("즐겨찾기를 하시겠어요?")) {
+                    axios.post("/api/bookmark/save",
                     {
                         bookMarkName: companyname,
                         bookMarkImg: img,
                         bookMark_Start_Date: start,
                         bookMark_End_Date: end,
                         company_link: link,
+                        user_bookmark_id: 0,
                     }, 
                     { 
                         headers: { 
@@ -285,6 +287,7 @@ function MainContainer() {
                         })
                     }
                 })
+            }
         }
 
     }
@@ -294,12 +297,7 @@ function MainContainer() {
 
             <img className="bannerImg" alt="banner_01" src={banner} />
 
-            <input type="text" className="input" placeholder="회사를 입력하세요" onChange={event => { setSearch(event.target.value) }} />
-
-            {userCompany.map((item) => {
-                console.log("test", item);
-            })}
-
+            {ID && <input type="text" className="input" placeholder="회사를 입력하세요" onChange={event => { setSearch(event.target.value) }} />}
             <br />
             <div className="SearchResultForm">
                 {items}
@@ -311,11 +309,9 @@ function MainContainer() {
     function ItemBox(props) {
 
         var mark = "M16.5 3c-1.74 0-3.41.81-4.5 2.09C10.91 3.81 9.24 3 7.5 3 4.42 3 2 5.42 2 8.5c0 3.78 3.4 6.86 8.55 11.54L12 21.35l1.45-1.32C18.6 15.36 22 12.28 22 8.5 22 5.42 19.58 3 16.5 3zm-4.4 15.55l-.1.1-.1-.1C7.14 14.24 4 11.39 4 8.5 4 6.5 5.5 5 7.5 5c1.54 0 3.04.99 3.57 2.36h1.87C13.46 5.99 14.96 5 16.5 5c2 0 3.5 1.5 3.5 3.5 0 2.89-3.14 5.74-7.9 10.05z"
-         userBookmark.map((userBookmark, key) => {
-                if(userBookmark.companyname == props.name){
-                    mark = "M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"
-                }
-            })
+            if (userCompany.includes(props.name)) {
+                mark = "M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"
+            }
 
         
         return (
@@ -329,7 +325,7 @@ function MainContainer() {
                         <h2 class="card-body-heading">{props.name}</h2>
                         <div class="card-body-options">
                             <div class="card-body-option card-body-option-favorite">
-                                <svg fill="#d12e46" height="26" viewBox="0 0 24 24" width="26" xmlns="http://www.w3.org/2000/svg" onClick={(e) => { bookmark(e, props.name, props.plan, props.img, props.link, props.bookmark) }}>
+                                <svg fill="#d12e46" height="26" viewBox="0 0 24 24" width="26" xmlns="http://www.w3.org/2000/svg" onClick={(e) => { bookmark(e, props.key, props.name, props.plan, props.img, props.link, props.bookmark) }}>
                                     <path d="M0 0h24v24H0z" fill="none" />
                                     <path d= {mark}/>
                                 </svg>

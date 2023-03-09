@@ -20,6 +20,10 @@
   font-style: normal;
 }
 
+li {
+  cursor: pointer;
+}
+
 .Header {
   width: 100%;
   height: 80px;

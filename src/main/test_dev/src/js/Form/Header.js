@@ -1,10 +1,12 @@
 import "./header.css"
 import React, { useState, useEffect } from 'react';
 import logo from '../../images/logo2.png';
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 function Header() {
 	const [isLogin, setIsLogin] = useState(false); //로그인 관리
+	const navigate = useNavigate();
+
 	useEffect(() => {
 		if (sessionStorage.getItem("tokenId") === null) {
 			// sessionStorage 에 name 라는 key 값으로 저장된 값이 없다면
@@ -13,7 +15,20 @@ function Header() {
 			// 로그인 상태 변경
 			setIsLogin(true);
 		}
-	});
+	}, []);
+
+	useEffect(() => {
+
+	}, [isLogin]);
+
+	const Logout = () => {
+		if (window.confirm("정말로 로그아웃 하시겠어요?")) {
+			sessionStorage.clear();
+			setIsLogin(false);
+			window.document.location = '/';
+			alert("성공적으로 로그인이 완료되었어요!");
+		}
+	}
 
 
 	return (
@@ -26,8 +41,8 @@ function Header() {
 				</div>
 				<ul className="navMenu">
 					{/* 로그인 후 메뉴 표시 */}
-					{isLogin ? <li><a className="menu" href="/mypage">{"마이페이지"}</a></li> : <li></li>}
-					{isLogin ? (<li><Link className="menu" onClick={() => { sessionStorage.clear() }} to="/">{'로그아웃'}</Link></li>)
+					{isLogin ? <li><Link to="/mypage" className="menu">{"마이페이지"}</Link></li> : <li></li>}
+					{isLogin ? (<li onClick={Logout}>로그아웃</li>)
 						: (<li><Link className="menu" to="/login">{'로그인'}</Link></li>)}
 				</ul>
 			</nav>
