@@ -89,6 +89,10 @@
 - Jenkins를 사용하여 CI/CD 파이프라인을 구축하였습니다.
 - JWT로그인을 구현하였습니다.
 
+### 🛠️ AWS Architecture
+
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/e51aa8e5-0253-4362-9ab5-d8f9729b5989/Untitled.png)
+
 ### 🛠️ CICD는 다음과 같은 형태로 이루어집니다.
 
 ---
