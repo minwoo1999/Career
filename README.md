@@ -36,7 +36,8 @@
 
 - 💻 **Features Preview**
     
-    ![jobhunt_search.PNG](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/050db073-f696-4d4c-9d65-15b39e5d2510/jobhunt_search.png)
+  ![jobhunt](https://user-images.githubusercontent.com/79193811/224291793-5af80c00-f67e-4bc0-83f9-06bc70e00905.PNG)
+
     
 
 ### 2.  회사 공채 스크랩(즐겨찾기)기능
@@ -47,8 +48,7 @@
 
 - 💻 **Features Preview**
     
-    ![jobhunt.PNG](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/63523061-6267-4a58-b603-3abdd5561623/jobhunt.png)
-    
+   ![jobhunt_search](https://user-images.githubusercontent.com/79193811/224291805-98d758f4-8cc2-4660-9dc2-109827ba8803.PNG)
 
 ### 3.  공채사이트 이동
 
@@ -58,7 +58,7 @@
 
 - 💻 **Features Preview**
     
-    ![jobkorea 회사공채소식.PNG](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/8dfce9b9-b990-47cb-a7e7-60f844647d11/jobkorea_%ED%9A%8C%EC%82%AC%EA%B3%B5%EC%B1%84%EC%86%8C%EC%8B%9D.png)
+   ![jobkorea 회사공채소식](https://user-images.githubusercontent.com/79193811/224291819-aa8b3ecc-b927-4e94-915d-034435acfd61.PNG)
     
 
 ### 사용한 기술 및 라이브러리
