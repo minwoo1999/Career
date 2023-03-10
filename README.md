@@ -78,7 +78,7 @@
 
 ---
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/d4ef3c1b-5734-498f-8fdb-771ec858322b/Untitled.png)
+![image](https://user-images.githubusercontent.com/79193811/224291472-50e9bf33-b34c-4cb1-a314-7532cdfbe4f0.png)
 
 ## 💻 내가 맡은 역할
 
@@ -99,7 +99,8 @@
 
 ---
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/24e30712-3683-4b7f-8489-06ca01d54b6c/Untitled.png)
+![image](https://user-images.githubusercontent.com/79193811/224291341-95732d30-8451-4223-b2cf-b13d3afda83e.png)
+
 
 ### 깨달은점
 
