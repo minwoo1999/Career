@@ -11,47 +11,38 @@
 
 .JoinForm .navLogo {
   font-size: 30px;
-  padding: 10px 0;
+  padding: 40px 0;
 }
 
 .JoinForm input {
-  font-size: 15px;
-  width: 350px;
+  width: 360px;
   height: 50px;
-  border-radius: 10px;
-  border: solid;
-  margin-top: 30px;
-  border-color: #e6e8ea;
-  border-width: 0.0789em;
-  font-family: 'Pretendard-Regular';
-  letter-spacing: -0.03em;
-  padding-left: 1em;
-  transition: 0.4s all;
-  outline-color: #4F85E8;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  border: 1px solid #999999;
+  box-sizing: border-box;
+  outline: none;
+  font-size: 16px;
+  margin: 10px 0;
+  text-indent: 10px;
 }
 
 .JoinForm input:focus {
-  border: 1px solid #4F85E8;
+  border: 1px solid rgb(50, 220, 199);
 }
 
-select {
-  -webkit-appearance:none; /* 크롬 화살표 없애기 */
-  -moz-appearance:none; /* 파이어폭스 화살표 없애기 */
-  appearance:none /* 화살표 없애기 */
-}
+.JoinForm input:-webkit-autofill {
+  box-shadow: 0 0 0 1000px #fff inset;
+}     
 
 .JoinForm .InputSex select {
-  font-size: 15px;
-  width: 370px;
-  height: 55px;
-  border-radius: 10px;
-  border: solid;
-  margin-top: 30px;
-  border-color: #e6e8ea;
-  border-width: 0.0789em;
-  font-family: 'Pretendard-Regular';
-  letter-spacing: -0.03em;
-  padding-left: 1em;
-  transition: 0.4s all;
-  outline-color: #4F85E8;
+  width: 360px;
+  height: 50px;
+  border: 1px solid #999999;
+  outline: none;
+  font-size: 14px;
+  text-indent: 10px;
+  margin: 10px 0;
 }

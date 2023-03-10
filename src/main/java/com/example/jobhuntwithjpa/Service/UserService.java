@@ -91,21 +91,19 @@ public class UserService {
     public List<UserAndBookmarkResponseDto> getMypage() {
         String username = this.getMyUserWithAuthorities().get().getUsername();
 
-        System.out.println("asd"+username);
         List<User> userByname = userRepository.findUserListByUsername(username);
-        System.out.println("asd"+userByname);
+        List<UserAndBookmarkResponseDto> collect = userByname.stream()
+                .map(o -> new UserAndBookmarkResponseDto(o))
+                .collect(Collectors.toList());
 
-//        for (UserBookMark userBookMark : allWithUser) {
-//            System.out.println(userBookMark.getUser().getUserId());
-//            System.out.println(userBookMark.getUser().getPassword());
-//            System.out.println(userBookMark.getUser().getNickname());
-//            System.out.println(userBookMark.getUser().getUsername());
-//            System.out.println(userBookMark.getBookMarkImg());
-//            System.out.println(userBookMark.getBookMark_End_Date());
-//            System.out.println(userBookMark.getBookMark_Start_Date());
-//            System.out.println(userBookMark.getBookMarkName());
-//            System.out.println("========================================");
-//        }
+        return collect;
+    }
+
+    @Transactional
+    public List<UserAndBookmarkResponseDto> getHome() {
+        String username = this.getMyUserWithAuthorities().get().getUsername();
+
+        List<User> userByname = userRepository.findUserListByUsername(username);
         List<UserAndBookmarkResponseDto> collect = userByname.stream()
                 .map(o -> new UserAndBookmarkResponseDto(o))
                 .collect(Collectors.toList());

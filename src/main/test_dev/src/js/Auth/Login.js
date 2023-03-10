@@ -2,25 +2,17 @@ import React, { useState, useEffect, useRef } from "react";
 import "./login.css";
 import axios from "axios";
 import Swal from "sweetalert2";
-import logo from '../../images/logo.png';
-import { useNavigate } from "react-router-dom";
-import { Link } from "react-router-dom";
 
 
 function Login() {
     const [email, setInputEmail] = useState("");
     const [pass, setInputPw] = useState("");
-    const navigate = useNavigate();
 
     const emailRef = useRef("");
     const passRef = useRef("");
 
     const handleInputEmail = (e) => {
         setInputEmail(e.target.value);
-    };
-
-    const clickLogo = () => {
-        navigate('/');
     };
 
     const handleInputPw = (e) => {
@@ -45,9 +37,9 @@ function Login() {
             passRef.current.focus();
         } else {
             axios
-                .post("/api/login", {
-                    username: email,
-                    password: pass,
+                .post("/login", {
+                    email: email,
+                    pass: pass,
                 })
                 .then((res) => {
                     console.log(res.data);
@@ -68,11 +60,12 @@ function Login() {
                         );
 
 
-                    } else if (res.data !== null ) {
+                    } else if (res.data !=null ) {
                         // id, pw 모두 일치 userId = userId1, msg = undefined
                         // console.log(res.data);
-                        sessionStorage.setItem("tokenId", res.data.token); 
-                        sessionStorage.setItem("refreshTokenId", res.data.refresh_token); // sessionStorage에 id를 user_id라는 key 값으로 저장
+                        sessionStorage.setItem("tokenId", res.data.split("/")[0]); 
+
+                        sessionStorage.setItem("refreshTokenId", res.data.split("/")[1]); // sessionStorage에 id를 user_id라는 key 값으로 저장
 
                         console.log("======================", "로그인 성공");
                         Swal.fire({
@@ -98,7 +91,7 @@ function Login() {
         <div className="LoginForm">
             <div className="navLogo" onClick={clickLogo}>
                 <span className="navLogo">
-                    <img src={logo} alt="홈페이지 로고" className="logo_header"/> </span>
+                    JOB-HUNTER </span>
             </div>
             <div className="InputId">
                 <input
@@ -130,24 +123,28 @@ function Login() {
             <div className="LoginOption">
                 <ul className="option-list">
                     <li className="list-item-text">
-                        <Link to="/findId" id="findId">
+                        <a href="/findId" id="findId">
                             아이디 찾기
-                        </Link>
+                        </a>
                     </li>
                     <li className="list-item-text">
-                        <Link to="/findPw" id="findPw">
+                        <a href="/findPw" id="findPw">
                             비밀번호 찾기
-                        </Link>
+                        </a>
                     </li>
                     <li className="list-item-text">
-                        <Link to="/join" id="signUp">
+                        <a href="/join" id="signUp">
                             회원가입
-                        </Link>
+                        </a>
                     </li>
                 </ul>
             </div>
         </div>
     );
 }
+
+const clickLogo = () => {
+    document.location.href = "/";
+};
 
 export default Login;

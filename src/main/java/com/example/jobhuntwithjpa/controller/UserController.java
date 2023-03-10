@@ -54,12 +54,10 @@ public class UserController {
     }
 
 
-    @PostMapping("/mypage")
+    @GetMapping("/mypage")
     @PreAuthorize("hasAnyRole('USER', 'ADMIN')")
     public List<UserAndBookmarkResponseDto> userMypage(){
-        System.out.println("들어오긴해 ?");
         List<UserAndBookmarkResponseDto> mypage = userService.getMypage();
-        System.out.println("dd"+mypage);
         return mypage;
 
     }
@@ -68,8 +66,7 @@ public class UserController {
     @PreAuthorize("hasAnyRole('USER', 'ADMIN')")
     public List<UserAndBookmarkResponseDto> userhome(){
 
-        List<UserAndBookmarkResponseDto> home = userService.getMypage();
-
+        List<UserAndBookmarkResponseDto> home = userService.getHome();
 
         return home;
 
@@ -91,7 +88,7 @@ public class UserController {
     @DeleteMapping("/bookmark/delete/{user_bookmark_id}")
     public ResponseEntity<ResponseMessage> bookMarkDelete(@PathVariable long user_bookmark_id){
 
-
+        System.out.println(user_bookmark_id);
         bookMarkService.bookMarkDelete(user_bookmark_id);
 
         return ResponseEntity.ok().body(ResponseMessage.builder()

@@ -22,11 +22,13 @@ public class UserAndBookmarkResponseDto {
     private String nickname;
     private String username;
 
+
     private List<bookMarkdto> bookmark;
 
     public UserAndBookmarkResponseDto(User user) {
         user_id=user.getUserId();
         nickname =user.getNickname() ;
+        username=user.getUsername();
         bookmark=user.getBookmark().stream()
                 .map(b->new bookMarkdto(b))
                 .collect(Collectors.toList());

@@ -16,7 +16,6 @@ function MyPage() {
 }
 function MyPageContent() {
   const ID = sessionStorage.getItem("tokenId")
-  const [company, setCompany] = useState([]);
   const [inputData, setInputData] = useState([{
     uno:'',
     email: '',
@@ -30,16 +29,17 @@ function MyPageContent() {
     // 채용정보
   }])
   const run = () => {
-    axios.get("/api/mypage", {
+    axios
+        .get("/mypage", {
             headers: {
-                Authorization: `Bearer ${sessionStorage.getItem("tokenId")}`,
+                Authorization: `${sessionStorage.getItem("tokenId")}`,
                 refreshTokenId: `${sessionStorage.getItem("refreshTokenId")}`
             }
         })
         .then((res) => {
+            console.log(res.data);
             console.log(sessionStorage.getItem("tokenId"));
             console.log(sessionStorage.getItem("refreshTokenId"));
-            setCompany(res.data[0].bookmark);
             setInputData(res.data)
 
             // if (res.data == true) {
@@ -77,6 +77,7 @@ function MyPageContent() {
                             
     
                         }).then(result => {
+
                             sessionStorage.clear()
                             // 만약 Promise리턴을 받으면,
                             if (result.isConfirmed) { // 만약 모달창에서 confirm 버튼을 눌렀다면
@@ -159,10 +160,10 @@ const bookmark = (e, companyname, plan, img, link) => {
                 console.log(result);
             });
   }
+
 }
 
 const delete_bookmark= (e, companyname) => {
-    console.log(companyname);
   if (ID != null) {
       Swal.fire({
           title: '즐겨찾기 삭제를 하시겠습니까?',
@@ -180,14 +181,16 @@ const delete_bookmark= (e, companyname) => {
       }).then(result => {
           // 만약 Promise리턴을 받으면,
           if (result.isConfirmed) { // 만약 모달창에서 confirm 버튼을 눌렀다면
+
             axios
-            .post("/api/bookmark/delete/1",
+            .post("/company-delete",
                 {
                     companyname: companyname
-                },{headers: {Authorization: `Bearer ${sessionStorage.getItem("tokenId")}`}}
+  
+                },{headers: {Authorization: `${sessionStorage.getItem("tokenId")}`}}
                 ).then(result=>{
 
-                    if(result.data === 1){
+                    if(result.data==1){
                       window.location.reload();
                     }
                     else{
@@ -202,31 +205,33 @@ const delete_bookmark= (e, companyname) => {
 
   return (
       <div class="metee_mypage_main_wraper_join_style">
-
-        {/* <div className="split">
-          <span class="myPageInfutTitle">이름</span>
-					<input class="myPageInputBox"  id='reg_mb_id' name="id" value={inputData[0].nickname} readonly/> 
-        </div>
-
-        <div className="split">
           <span class="myPageInfutTitle">이메일</span>
-            <input class="myPageInputBox"  id='reg_mb_id' name="id" value={inputData[0].username} readonly/> 
-            </div> */}
+					<input class="myPageInputBox"  id='reg_mb_id' name="id" value={inputData[0].email} readonly /> 
+
+
+          <span class="myPageInfutTitle">비밀번호</span>
+					<input class="myPageInputBox" type="password"
+						name="pass" maxlength="20" required
+						placeholder="password-1"/>
+				
+
+          <span class="myPageInfutTitle">이름</span>
+					<input class="myPageInputBox"  id='reg_mb_id' name="id" value={inputData[0].nickname} readonly /> 
+
+          <span class="myPageInfutTitle">전화번호</span>
+					<input class="myPageInputBox"  id='reg_mb_id' name="id" value={inputData[0].phone} readonly /> 
 
           <span class="myPageInfutTitle">내가 찜한 채용공고</span>
-        <div className="Card1">
+					<div className="Card1">
             <div className="c1image">
-            {company.map((item) => {
-                return <ItemBox name={item.bookMarkName} plan={item.bookMark_Start_Date + '~' + item.bookMark_End_Date} link={item.company_link} img={item.bookMarkImg} />
-            })}
-            {/* {inputData.map((v, index) => {
+            {inputData.map((v, index) => {
             if (index > 0){
               var plan
               plan = v.company_start + "~" + v.company_end
               return <ItemBox name={v.companyname} plan={plan} link={v.company_link} img={v.companyimg} />
               // return v.companyname
             }
-          })} */}
+          })}
             </div>
         </div>
           
@@ -243,26 +248,28 @@ const delete_bookmark= (e, companyname) => {
                 <div class="card-media" onClick={(e) => { jlink(props.link) }}>
                     <img src={props.img} alt="" class="card-media-img" />
                 </div>
+                <img src="img/delete.png" class="delete-img" width="10px" onClick={(e) => { delete_bookmark(e,props.name) }}></img>
+
                 <div class="card-body">
                     <h2 class="card-body-heading">{props.name}</h2>
-                    <div class="card-button card-button-link">
-                        <span>{props.plan}</span>
-                    </div>
                     <div class="card-body-options">
-                        <div class="card-body-option">
-                            <svg fill="#d12e46" height="24" viewBox="0 0 24 24" width="20" xmlns="http://www.w3.org/2000/svg" onClick={(e) => { delete_bookmark(e, props.name) }}>
+                        <div class="card-body-option card-body-option-favorite">
+                            <svg fill="#d12e46" height="26" viewBox="0 0 24 24" width="26" xmlns="http://www.w3.org/2000/svg" onClick={(e) => { bookmark(e, props.name, props.plan, props.img, props.link) }}>
                                 <path d="M0 0h24v24H0z" fill="none" />
                                 <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
                             </svg>
                         </div>
-                        <div class="card-body-option">
-                            <svg fill="#9C948A" height="24" viewBox="0 0 24 24" width="20" xmlns="http://www.w3.org/2000/svg">
+                        <div class="card-body-option card-body-option-share">
+                            <svg fill="#9C948A" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M0 0h24v24H0z" fill="none" />
                                 <path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81 1.66 0 3-1.34 3-3s-1.34-3-3-3-3 1.34-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9c-1.66 0-3 1.34-3 3s1.34 3 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.16c-.05.21-.08.43-.08.65 0 1.61 1.31 2.92 2.92 2.92 1.61 0 2.92-1.31 2.92-2.92s-1.31-2.92-2.92-2.92z" />
                             </svg>
                         </div>
                     </div>
                     <br />
+                    <div class="card-button card-button-link">
+                        <span>{props.plan}</span>
+                    </div>
                 </div>
 
             </div>
