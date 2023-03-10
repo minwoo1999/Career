@@ -1,4 +1,5 @@
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/71cbee99-1068-41a3-b9b8-ee7cb0a0dcd3/Untitled.png)
+![image](https://user-images.githubusercontent.com/79193811/224291245-5a19eb86-4d94-4db3-ab8d-fdcfb048b262.png)
+
 
 ## 프로젝트 기간
 
