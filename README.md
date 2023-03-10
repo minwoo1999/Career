@@ -91,7 +91,8 @@
 
 ### 🛠️ AWS Architecture
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/e51aa8e5-0253-4362-9ab5-d8f9729b5989/Untitled.png)
+![image](https://user-images.githubusercontent.com/79193811/224347111-58d01daf-edad-4d6d-8eaf-9cfdb3aea7ed.png)
+
 
 ### 🛠️ CICD는 다음과 같은 형태로 이루어집니다.
 
