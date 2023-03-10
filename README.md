@@ -148,11 +148,6 @@ public String getErrorPath() {
 
 - https://github.com/minwoo1999/SpringBootReactApp
 
-### github링크
-
----
-
-[https://github.com/minwoo1999/JOBHUNT](https://github.com/minwoo1999/JOBHUNT)
 
 ### CICD 링크
 
