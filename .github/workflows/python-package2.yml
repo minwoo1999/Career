@@ -70,7 +70,7 @@ jobs:
         add: '*.json'
         push: false
     - name: Push
-      uses: ad-m/github-push-action@master
+      uses: ad-m/github-push-action@main
       with:
         branch: 'main'
         github_token: ${{ secrets.TOKEN }}
