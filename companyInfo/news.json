@@ -1,74 +1,282 @@
 {
-	"㈜대우건설": {
-		"state": "시작",
-		"content": "2023년 상반기 신입사원/채용 연계형 인턴사원 채용",
+	"현대자동차㈜": {
+		"state": "마감",
+		"content": "현대자동차 국내법무 모집",
+		"position": "경력무관",
+		"plan": "04/14~05/01",
+		"link": "/Company/1360583/Info",
+		"img": "https://imgs.jobkorea.co.kr/img1/_whitebg/200X80/Co_Logo/Logo/2019/4/2335s008R-_4X9u1963523-0esY8U1_9-2s-.jpg?v=202305011612&hash=r&serviceCode=CL"
+	},
+	"국민연금공단": {
+		"state": "마감",
+		"content": "2023년도 체험형 청년인턴 추가 채용",
 		"position": "인턴·신입",
-		"plan": "04/01~04/17",
-		"link": "/Company/1778072/Info",
-		"img": "https://imgs.jobkorea.co.kr/img1/_whitebg/200X80/Co_Logo/Logo/2018/10/2t5gl009Dx_cGltxw2l3g2sx0flFmOq_xggalx.png?v=202304301720&hash=r&serviceCode=CL"
+		"plan": "04/24~05/01",
+		"link": "/Company/1939400/Info",
+		"img": "https://imgs.jobkorea.co.kr/img1/_whitebg/200X80/Co_Logo/Logo/2014/4/2313j007Pt_6W6i2c3322t0djMnS6_2ejt.jpg?v=202305011612&hash=r&serviceCode=CL"
 	},
-	"㈜엔씨소프트": {
-		"state": "시작",
-		"content": "엔씨소프트 부문별 수시 채용",
-		"position": "신입·경력",
-		"plan": "04/01~04/30",
-		"link": "/Company/1926620/Info",
-		"img": "https://imgs.jobkorea.co.kr/img1/_whitebg/200X80/Co_Logo/Logo/2019/10/2w1kj007Pr_gWhi2c3x22r0djMnSf_2sjr.jpg?v=202304301720&hash=r&serviceCode=CL"
+	"엘지유플러스": {
+		"state": "마감",
+		"content": "2023 학/석/박사 과정 Global Summer Internship 모집",
+		"position": "인턴·신입",
+		"plan": "04/14~05/01",
+		"link": "/Company/1681299/Info",
+		"img": "https://imgs.jobkorea.co.kr/img1/_whitebg/200X80/Co_Logo/Logo/2018/10/31/2e1be007Ps_tWoh2b3h2cs0deMoSe_nves.jpg?v=202305011612&hash=r&serviceCode=CL"
 	},
-	"㈜시몬스": {
-		"state": "시작",
-		"content": "2023년 상반기 부문별 채용공고",
+	"대상㈜": {
+		"state": "마감",
+		"content": "4월 신입/경력사원 모집",
 		"position": "신입·경력",
-		"plan": "04/01~04/30",
-		"link": "/Company/16154006/Info",
-		"img": "https://imgs.jobkorea.co.kr/img1/_whitebg/200X80/Co_Logo/Logo/2022/6/28/JK_CO_8RMtjf022062809302281.jpg?v=202304301720"
+		"plan": "04/21~05/01",
+		"link": "/Company/1609106/Info",
+		"img": "https://imgs.jobkorea.co.kr/img1/_whitebg/200X80/Co_Logo/Logo/2021/11/26/2R1CX007PG_DWNP2F3I2QG0dXMASJ_QWXG.jpg?v=202305011612&hash=r&serviceCode=CL"
 	},
-	"㈜오상헬스케어": {
-		"state": "시작",
-		"content": "(주)오상헬스케어 신입 및 경력직 모집",
+	"㈜일진글로벌홀딩스": {
+		"state": "마감",
+		"content": "[일진그룹] 2023년 신입사원 수시채용",
+		"position": "신입",
+		"plan": "04/17~05/01",
+		"link": "/Company/1980523/Info",
+		"img": "https://imgs.jobkorea.co.kr/img1/_whitebg/200X80/Co_Logo/Logo/2022/3/14/JK_CO_56Om7Rb22031408480667.jpg?v=202305011612"
+	},
+	"SFA반도체㈜": {
+		"state": "마감",
+		"content": "2023년도 부문별 신입/경력 채용",
 		"position": "신입·경력",
-		"plan": "04/01~04/30",
-		"link": "/Company/1386269/Info",
-		"img": "https://imgs.jobkorea.co.kr/img1/_whitebg/200X80/Co_Logo/Logo/2022/9/22/JK_CO_CxoQNUn22092215591497.png?v=202304301720"
+		"plan": "04/21~05/01",
+		"link": "/Company/1920423/Info",
+		"img": "https://imgs.jobkorea.co.kr/img1/_whitebg/200X80/Co_Logo/Logo/2016/7/2P72X00aRV_IKXX5X0CX3926V0gXYXIJ_NV9A2XV.gif?v=202305011612&hash=r&serviceCode=CL"
+	},
+	"프라다코리아 유한회사": {
+		"state": "마감",
+		"content": "[PRADA Korea] 물류센터 인턴사원 채용",
+		"position": "인턴·신입",
+		"plan": "01/31~05/01",
+		"link": "/Company/1633800/Info",
+		"img": "https://imgs.jobkorea.co.kr/img1/_whitebg/200X80/Co_Logo/Logo/2017/10/2f59l009Dq_jGyt4n2n3l29q0flFwOw_ql4qlq.png?v=202305011612&hash=r&serviceCode=CL"
+	},
+	"㈜디에이피": {
+		"state": "마감",
+		"content": "(주)디에이피 안산공장 `23년 PCB 제조ㆍ검사원 모집(신입/경력)",
+		"position": "신입·경력",
+		"plan": "01/31~05/01",
+		"link": "/Company/1554402/Info",
+		"img": "https://imgs.jobkorea.co.kr/img1/_whitebg/200X80/Co_Logo/Logo/2010/13/2x5nj009Dw_wGfqwt2j3m2jw0fjFlOd_vndnjw.jpg?v=202305011612&hash=r&serviceCode=CL"
+	},
+	"국가정보원": {
+		"state": "마감",
+		"content": "2023년도 국가정보원 일반직 9급 채용",
+		"position": "신입·경력",
+		"plan": "04/14~05/01",
+		"link": "/Company/16153550/Info",
+		"img": "https://imgs.jobkorea.co.kr/img1/_whitebg/200X80/Co_Logo/Logo/2021/8/03/2j5xd004Da_7G_2i22a0adFfO2da.gif?v=202305011613&hash=r&serviceCode=CL"
+	},
+	"대림비앤코㈜": {
+		"state": "마감",
+		"content": "[대림바스] 전부문 신입/경력사원 채용(인사/총무/회계/기획/영업기획/IT/보안/개발/부산AS)",
+		"position": "신입·경력",
+		"plan": "04/20~05/01",
+		"link": "/Company/16153881/Info",
+		"img": "https://imgs.jobkorea.co.kr/img1/_whitebg/200X80/Co_Logo/Logo/2023/4/21/JK_CO_pxcRXnj23042109312298.gif?v=202305011613"
+	},
+	"동아오츠카㈜": {
+		"state": "마감",
+		"content": "대졸 영업사원 공개채용",
+		"position": "신입·경력",
+		"plan": "04/24~05/01",
+		"link": "/Company/1376390/Info",
+		"img": "https://imgs.jobkorea.co.kr/img1/_whitebg/200X80/Co_Logo/Logo/2021/12/09/JK_CO_WQmASiy21120909434212.jpg?v=202305011613"
+	},
+	"로버트보쉬코리아": {
+		"state": "마감",
+		"content": "[로버트보쉬코리아] Channel Marketer for Automotive Aftermarket division Korea for the ecommerce Channel 정규직 채용 (경력)",
+		"position": "신입·경력",
+		"plan": "04/18~05/01",
+		"link": "/Company/47492458/Info",
+		"img": "https://imgs.jobkorea.co.kr/img1/_whitebg/200X80/Co_Logo/Logo/2019/4/9/2s1aa007Pg_rWzf2c3a2jg0daMnSz_lwag.jpg?v=202305011613&hash=r&serviceCode=CL"
+	},
+	"로지스올그룹": {
+		"state": "마감",
+		"content": "LogisALL 신입/경력사원 채용(IT시스템 개발, 디자인&웹퍼블리싱, 전산지원)",
+		"position": "신입·경력",
+		"plan": "04/19~05/01",
+		"link": "/Company/1648570/Info",
+		"img": "https://imgs.jobkorea.co.kr/img1/_whitebg/200X80/Co_Logo/Logo/2012/2/2918v007Pr_8W5m2e3829r0dvMtS5_8svr.jpg?v=202305011613&hash=r&serviceCode=CL"
+	},
+	"에어부산(주)": {
+		"state": "마감",
+		"content": "'23년(상) 캐빈승무원(신입인턴) 채용",
+		"position": "인턴·신입",
+		"plan": "04/24~05/01",
+		"link": "/Company/1912980/Info",
+		"img": "https://imgs.jobkorea.co.kr/img1/_whitebg/200X80/Co_Logo/Logo/2008/10/2814a007Pd_5W3f2q3123d0daMqS7_6rad.jpg?v=202305011613&hash=r&serviceCode=CL"
+	},
+	"엔에이치엔㈜": {
+		"state": "마감",
+		"content": "[NHN] 채용운영 (계약직)",
+		"position": "경력무관",
+		"plan": "01/31~05/01",
+		"link": "/Company/1546668/Info",
+		"img": "https://imgs.jobkorea.co.kr/img1/_whitebg/200X80/Co_Logo/Logo/2022/8/01/JK_CO_crmktk22080120230820.png?v=202305011613"
+	},
+	"유니온머티리얼㈜": {
+		"state": "마감",
+		"content": "유니온머티리얼㈜ 신입/경력사원 수시채용",
+		"position": "신입·경력",
+		"plan": "04/19~05/01",
+		"link": "/Company/1463292/Info",
+		"img": "https://imgs.jobkorea.co.kr/img1/_whitebg/200X80/Co_Logo/Logo/2018/10/2012n007Pn_1W2c243625n0dnM3S0_9cnn.gif?v=202305011613&hash=r&serviceCode=CL"
+	},
+	"이노시스㈜": {
+		"state": "마감",
+		"content": "이노시스㈜ 2023년 2분기 채용",
+		"position": "신입·경력",
+		"plan": "04/18~05/01",
+		"link": "/Company/44576168/Info",
+		"img": "https://imgs.jobkorea.co.kr/img1/_whitebg/200X80/Co_Logo/Logo/2022/7/29/JK_CO_BZxUcsI22072917434108.png?v=202305011613"
+	},
+	"㈜ 시아스": {
+		"state": "마감",
+		"content": "각 분야별 [신입 및 경력] 사원 모집 - (생산/공무/SCM-물류/관리팀/품질관리/영업)",
+		"position": "신입·경력",
+		"plan": "04/25~05/01",
+		"link": "/Recruit/Co_Read/C/sias2004",
+		"img": "https://imgs.jobkorea.co.kr/img1/_whitebg/200X80/Co_Logo/Logo/2006/3/2539c008Rr_cX8f2wf3922r0ecYqU9_8a2cr.jpg?v=202305011613&hash=r&serviceCode=CL"
+	},
+	"㈜고영테크놀러지": {
+		"state": "마감",
+		"content": "[고영테크놀러지] 각 부문 채용전제형 인턴 및 경력 사원 모집",
+		"position": "인턴·신입·경력",
+		"plan": "04/14~05/01",
+		"link": "/Company/1774734/Info",
+		"img": "https://imgs.jobkorea.co.kr/img1/_whitebg/200X80/Co_Logo/Logo/2007/6/2x3dm008Rw_lXbyvvo3z2bw0emYaUw_ix2mw.jpg?v=202305011613&hash=r&serviceCode=CL"
+	},
+	"㈜넥슨네트웍스": {
+		"state": "마감",
+		"content": "[판교] 2023 상반기 게임서비스 채용연계형 인턴 모집",
+		"position": "인턴·신입",
+		"plan": "04/18~05/01",
+		"link": "/Company/1648324/Info",
+		"img": "https://imgs.jobkorea.co.kr/img1/_whitebg/200X80/Co_Logo/Logo/2012/4/2y3jt008Rr_dXrmcfc3a2fr0etYcUm_za2tr.jpg?v=202305011613&hash=r&serviceCode=CL"
+	},
+	"㈜서울레이크사이드": {
+		"state": "마감",
+		"content": "[(주)서울레이크사이드 골프장] 홀서비스/조리/시설 부문 채용 안내",
+		"position": "신입·경력",
+		"plan": "04/25~05/01",
+		"link": "/Company/1730925/Info",
+		"img": "https://imgs.jobkorea.co.kr/img1/_whitebg/200X80/Co_Logo/Logo/2022/10/13/JK_CO_MFzvUxF22101310565394.gif?v=202305011614"
+	},
+	"㈜이글루코퍼레이션": {
+		"state": "마감",
+		"content": "연구소 IT개발(서버/백엔드/프론트엔드/Python/웹 퍼블리셔/QA 엔지니어) 대규모 채용",
+		"position": "신입·경력",
+		"plan": "01/31~02/28",
+		"link": "/Company/1447356/Info",
+		"img": "https://imgs.jobkorea.co.kr/img1/_whitebg/200X80/Co_Logo/Logo/2022/4/11/JK_CO_cuaSKg722041112553480.png?v=202305011614"
+	},
+	"㈜이랜드이츠": {
+		"state": "마감",
+		"content": "[이랜드이츠] 2023 외식 상반기 신입 공채 인턴십(채용연계형)",
+		"position": "인턴·신입",
+		"plan": "04/20~05/02",
+		"link": "/Company/16153250/Info",
+		"img": "https://imgs.jobkorea.co.kr/img1/_whitebg/200X80/Co_Logo/Logo/2021/8/19/2r5gc009Dg_dGkaxn2q3g2qg0fcFwOj_xsjjcg.jpg?v=202305011614&hash=r&serviceCode=CL"
+	},
+	"㈜좋은사람들": {
+		"state": "마감",
+		"content": "창립 30주년 좋은사람들 함께할 경력/신입/인턴 사원을 모집합니다",
+		"position": "신입·경력",
+		"plan": "04/21~05/01",
+		"link": "/Company/1404262/Info",
+		"img": "https://imgs.jobkorea.co.kr/img1/_whitebg/200X80/Co_Logo/Logo/2005/5/2x5js009Dg_jGfvdx2s3q2lg0fsFfOg_jsqqsg.jpg?v=202305011614&hash=r&serviceCode=CL"
 	},
 	"㈜해커스어학원": {
-		"state": "시작",
-		"content": "2023년 해커스교육그룹 신입 및 경력사원 채용",
-		"position": "인턴·신입·경력",
-		"plan": "04/01~04/30",
+		"state": "마감",
+		"content": "해커스 교육그룹 직원전환형 인턴 채용",
+		"position": "인턴·신입",
+		"plan": "04/14~05/01",
 		"link": "/Company/1341121/Info",
-		"img": "https://imgs.jobkorea.co.kr/img1/_whitebg/200X80/Co_Logo/Logo/2012/5/2b31m008Rt_iX3y1wd3423t0emYqUv_6m2mt.jpg?v=202304301720&hash=r&serviceCode=CL"
+		"img": "https://imgs.jobkorea.co.kr/img1/_whitebg/200X80/Co_Logo/Logo/2012/5/2b31m008Rt_iX3y1wd3423t0emYqUv_6m2mt.jpg?v=202305011614&hash=r&serviceCode=CL"
 	},
-	"KCC정보통신": {
-		"state": "시작",
-		"content": "[KCC정보통신] 프로젝트 구축 및 유지보수 지원 엔지니어 신입 및 경력사원 모집",
-		"position": "신입·경력",
-		"plan": "04/01~04/10",
-		"link": "/Company/1833639/Info",
-		"img": "https://imgs.jobkorea.co.kr/img1/_whitebg/200X80/Co_Logo/Logo/2021/5/28/2r1xv007Pr_dWfm2s3i2wr0dvMrSj_gsvr.png?v=202304301721&hash=r&serviceCode=CL"
-	},
-	"아고다": {
+	"㈜현대경제연구원": {
 		"state": "마감",
-		"content": "[대규모 확장] 아고다 CX Specialist 정규직 채용 (재택근무 병행)",
-		"position": "신입·경력",
-		"plan": "03/02~04/01",
-		"link": "/Company/44333774/Info",
-		"img": "https://imgs.jobkorea.co.kr/img1/_whitebg/200X80/Co_Logo/Logo/2019/2/2059w009Db_jG5n4g2n3622b0fwFxOw_9p7qwb.png?v=202304301721&hash=r&serviceCode=CL"
+		"content": "사업기획 및 교육운영 담당자 채용",
+		"position": "경력무관",
+		"plan": "04/26~05/01",
+		"link": "/Company/1613598/Info",
+		"img": "https://imgs.jobkorea.co.kr/img1/_whitebg/200X80/Co_Logo/Logo/2012/10/2390n006Xd_7G8zp2024d0cnV9R7_2nd.jpg?v=202305011614&hash=r&serviceCode=CL"
 	},
-	"㈜사옹원": {
+	"㈜현대캐터링시스템": {
 		"state": "마감",
-		"content": "각 부서별 직원 채용 - (식품영업/무역사무원/총무/품질관리/생산기술팀/공무/영양사)",
+		"content": "현대캐터링시스템 신입/경력 채용(행정 서무직)",
 		"position": "신입·경력",
-		"plan": "03/20~04/01",
-		"link": "/Company/1807752/Info",
-		"img": "https://imgs.jobkorea.co.kr/img1/_whitebg/200X80/Co_Logo/Logo/2004/11/2w5jf009Dw_dGmxdg2p3g29w0ffFxOb_xn4jfw.jpg?v=202304301721&hash=r&serviceCode=CL"
+		"plan": "04/26~05/01",
+		"link": "/Recruit/Co_Read/C/hyundaictr",
+		"img": "https://imgs.jobkorea.co.kr/img1/_whitebg/200X80/Co_Logo/Logo/2014/9/11/2a7vm00aRk_jKnnofldp3i2ok0gmYeIq_iuvc2mk.jpg?v=202305011614&hash=r&serviceCode=CL"
 	},
-	"한국평가데이터㈜": {
+	"킨코스코리아㈜": {
 		"state": "마감",
-		"content": "일반직(정규직) 인재영입 상품기획(부동산 DB, 데이터운영) 분야",
-		"position": "인턴·신입·경력",
-		"plan": "03/22~04/01",
-		"link": "/Company/1819994/Info",
-		"img": "https://imgs.jobkorea.co.kr/img1/_whitebg/200X80/Co_Logo/Logo/2022/3/03/JK_CO_FdgWFUF22030313310811.png?v=202304301721"
+		"content": "킨코스코리아 각 부문 신입 및 경력 채용",
+		"position": "신입·경력",
+		"plan": "04/24~05/01",
+		"link": "/Company/1409236/Info",
+		"img": "https://imgs.jobkorea.co.kr/img1/_whitebg/200X80/Co_Logo/Logo/2019/9/2m1cv007Pd_vWnm2i3w23d0dvMjSg_6rvd.jpg?v=202305011614&hash=r&serviceCode=CL"
+	},
+	"하나카드㈜": {
+		"state": "마감",
+		"content": "[계약직] 하나카드 채권관리 직무 수시채용",
+		"position": "신입",
+		"plan": "04/25~05/01",
+		"link": "/Company/1389003/Info",
+		"img": "https://imgs.jobkorea.co.kr/img1/_whitebg/200X80/Co_Logo/Logo/2015/10/2o7nm00aRn_nKnnqclip3d2on0gmYjIo_lpmp2mn.gif?v=202305011614&hash=r&serviceCode=CL"
+	},
+	"한국생활건강": {
+		"state": "마감",
+		"content": "2023년 상반기 각 부문 신입/경력사원 모집",
+		"position": "신입·경력",
+		"plan": "04/03~05/07",
+		"link": "/Company/44240319/Info",
+		"img": "https://imgs.jobkorea.co.kr/img1/_whitebg/200X80/Co_Logo/Logo/2016/2/2733c008Rk_lX7f3xo3724k0ecYwU7_1s2ck.JPG?v=202305011614&hash=r&serviceCode=CL"
+	},
+	"한국콜마㈜": {
+		"state": "마감",
+		"content": "23년 4월 한국콜마 화장품시설 신입사원 수시채용",
+		"position": "인턴·신입",
+		"plan": "04/17~05/01",
+		"link": "/Company/1888945/Info",
+		"img": "https://imgs.jobkorea.co.kr/img1/_whitebg/200X80/Co_Logo/Logo/2021/8/17/2o1jv007Pg_uWlm2h3q23g0dvMeSq_6wvg.jpg?v=202305011614&hash=r&serviceCode=CL"
+	},
+	"에스케이브로드밴드㈜": {
+		"state": "예상",
+		"content": "2023년 상반기 에스케이브로드밴드㈜ 인턴·신입  채용",
+		"position": "인턴·신입",
+		"plan": "05/02~05/17",
+		"link": "/Company/1818727/Info",
+		"img": "https://imgs.jobkorea.co.kr/img1/_whitebg/200X80/Co_Logo/Logo/2018/4/2832s008R-_4X1u0963328-0esY8U0_2-2s-.gif?v=202305011615&hash=r&serviceCode=CL"
+	},
+	"㈜신도리코": {
+		"state": "예상",
+		"content": "2023년 상반기 ㈜신도리코 인턴·신입·경력  채용",
+		"position": "인턴·신입",
+		"plan": "05/02~05/16",
+		"link": "/Company/1873837/Info",
+		"img": "https://imgs.jobkorea.co.kr/img1/_whitebg/200X80/Co_Logo/Logo/2022/1/21/JK_CO_SeENTIK22012108542339.jpg?v=202305011615"
+	},
+	"어드밴텍케이알㈜": {
+		"state": "예상",
+		"content": "2023년 상반기 어드밴텍케이알㈜ 신입·경력  채용",
+		"position": "신입",
+		"plan": "05/02~05/22",
+		"link": "/Company/16152441/Info",
+		"img": "https://imgs.jobkorea.co.kr/img1/_whitebg/200X80/Co_Logo/Logo/2021/2/18/2j5fd004Dw_qG_2n2lw0adFyO2dw.jpg?v=202305011615&hash=r&serviceCode=CL"
+	},
+	"에이치디씨현대산업개발": {
+		"state": "예상",
+		"content": "2023년 상반기 현대산업개발 신입·경력  채용",
+		"position": "신입",
+		"plan": "05/02~05/22",
+		"link": "/Company/44670146/Info",
+		"img": "https://imgs.jobkorea.co.kr/img1/_whitebg/200X80/Co_Logo/Logo/2021/4/21/2432s008R-_2X1u8923329-0esY8U3_2-2s-.jpg?v=202305011615&hash=r&serviceCode=CL"
 	}
 }
