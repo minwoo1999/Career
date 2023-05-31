@@ -82,8 +82,8 @@
 ### DATABASE S**chema**
 
 ---
+![image](https://github.com/minwoo1999/JOBHUNT_JPA/assets/79193811/6c046b22-5abf-4398-986a-345fd26be880)
 
-![image](https://user-images.githubusercontent.com/79193811/224291472-50e9bf33-b34c-4cb1-a314-7532cdfbe4f0.png)
 
 ## 💻 내가 맡은 역할
 
