@@ -5,14 +5,15 @@
 
 ---
 
-- 2022-12 ~ 2023-1.
+- 2022-04 ~ 2023-05.
 
 ## 팀원
 
 ---
 
-- 백엔드 2명(김민우,이창훈)
-- 프론트 1명(김현우)
+- 백엔드 2명(김민우,성창규)
+- 프론트 2명(김현우, 최지은)
+- 안드로이드 1명(강문수)
 
 ## 💡 Background
 
@@ -92,6 +93,17 @@
 ### 🛠️ AWS Architecture
 
 ![image](https://user-images.githubusercontent.com/79193811/224347111-58d01daf-edad-4d6d-8eaf-9cfdb3aea7ed.png)
+
+### 🛠️ AWS Architecture V2
+
+![image](https://github.com/withcareer/backend_jobhunt/assets/79193811/0c5d2cee-c9d9-4b7e-8723-e10f0266e825)
+
+- EC2 Bastion Host
+- autoscaling (scale out)
+- loadbalancing
+- nginx 도입
+- route53 과 ACM을 통한 https 적용
+
 
 
 ### 🛠️ CICD는 다음과 같은 형태로 이루어집니다.
