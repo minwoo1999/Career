@@ -37,7 +37,8 @@
 
 - 💻 **Features Preview**
     
-  ![jobhunt](https://user-images.githubusercontent.com/79193811/224291793-5af80c00-f67e-4bc0-83f9-06bc70e00905.PNG)
+![image](https://github.com/minwoo1999/JOBHUNT_JPA/assets/79193811/8715a043-8b47-4299-b0d3-0baf6272aa27)
+
 
     
 
@@ -117,6 +118,14 @@
 ---
 
 ![image](https://user-images.githubusercontent.com/79193811/224291341-95732d30-8451-4223-b2cf-b13d3afda83e.png)
+
+### Android
+
+![image](https://github.com/minwoo1999/JOBHUNT_JPA/assets/79193811/93e03074-9089-452a-a266-72b5977b7305)
+
+![image](https://github.com/minwoo1999/JOBHUNT_JPA/assets/79193811/3ce73629-a045-4873-8c98-e1f1e7136c6d)
+
+
 
 
 ### 깨달은점
