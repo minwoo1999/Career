@@ -51,6 +51,9 @@
 - 💻 **Features Preview**
     
    ![jobhunt_search](https://user-images.githubusercontent.com/79193811/224291805-98d758f4-8cc2-4660-9dc2-109827ba8803.PNG)
+   
+   ![image](https://github.com/minwoo1999/JOBHUNT_JPA/assets/79193811/6bfcabb6-7bb5-41a9-b86d-ceab1de35e02)
+
 
 ### 3.  공채사이트 이동
 
