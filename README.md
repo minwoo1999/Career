@@ -109,6 +109,12 @@
 - route53 과 ACM을 통한 https 적용
 
 
+## git action 을 통해 주기적으로 채용정보 수집
+
+![image](https://github.com/minwoo1999/JOBHUNT_JPA/assets/79193811/8f8d12cf-f38c-47cf-86f6-fade36f2ed93)
+
+
+
 
 ### 🛠️ CICD는 다음과 같은 형태로 이루어집니다.
 
