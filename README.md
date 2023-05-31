@@ -69,6 +69,11 @@
 
 ![image](https://github.com/minwoo1999/JOBHUNT_JPA/assets/79193811/1660f946-a4d5-4c2f-aa2a-673f1681f414)
 
+### 5. 팀원 모집을 위한 게시판서비스
+
+![image](https://github.com/minwoo1999/JOBHUNT_JPA/assets/79193811/f9a65494-ef92-40f5-a32b-c380fcb7ff5d)
+
+
     
 
 ### 사용한 기술 및 라이브러리
