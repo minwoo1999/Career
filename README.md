@@ -64,6 +64,11 @@
 - 💻 **Features Preview**
     
    ![jobkorea 회사공채소식](https://user-images.githubusercontent.com/79193811/224291819-aa8b3ecc-b927-4e94-915d-034435acfd61.PNG)
+   
+### 4. chatGpt API를 활용한 질문서비스
+
+![image](https://github.com/minwoo1999/JOBHUNT_JPA/assets/79193811/1660f946-a4d5-4c2f-aa2a-673f1681f414)
+
     
 
 ### 사용한 기술 및 라이브러리
