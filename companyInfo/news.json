@@ -1,18 +1,74 @@
 {
-	"CJ제일제당㈜": {
+	"㈜D&O": {
 		"state": "시작",
-		"content": "[식품사업/공통부문] 채용연계형 SUMMER INTERNSHIP (국내대/해외대 전형)",
-		"position": "인턴·신입",
-		"plan": "05/01~05/19",
-		"link": "/Company/1436838/Info",
-		"img": "https://imgs.jobkorea.co.kr/img1/_whitebg/200X80/Co_Logo/Logo/2015/9/2l76o00aRd_eKaikb9oj3u22d0goYtIl_sr0f2od.jpg?v=202305301722&hash=r&serviceCode=CL"
+		"content": "[LG그룹 D&O] 레저 분야별 경력/신입 채용(곤지암리조트/골프클럽)",
+		"position": "인턴·신입·경력",
+		"plan": "06/01~06/15",
+		"link": "/Company/1671321/Info",
+		"img": "https://imgs.jobkorea.co.kr/img1/_whitebg/200X80/Co_Logo/Logo/2022/3/31/JK_CO_cxXbU9L22033118351616.jpg?v=202306021013"
 	},
-	"이랜드월드": {
+	"대교": {
 		"state": "시작",
-		"content": "[패션] 2023 전역(예정) 장교채용",
-		"position": "인턴·신입",
-		"plan": "05/01~05/22",
-		"link": "/Company/1423256/Info",
-		"img": "https://imgs.jobkorea.co.kr/img1/_whitebg/200X80/Co_Logo/Logo/2021/11/08/2533s008R-_2X9u1923523-0esY8U9_1-2s-.jpg?v=202305301722&hash=r&serviceCode=CL"
+		"content": "각 부문 경력사원 채용",
+		"position": "신입·경력",
+		"plan": "06/01~06/16",
+		"link": "/Company/1620897/Info",
+		"img": "https://imgs.jobkorea.co.kr/img1/_whitebg/200X80/Co_Logo/Logo/2013/8/2o39z008Rq_mXwj4cy3x26q0ezYdUl_8w2zq.jpg?v=202306021013&hash=r&serviceCode=CL"
+	},
+	"GS네오텍㈜": {
+		"state": "시작",
+		"content": "GS네오텍㈜ IT사업 경력/신입사원 채용",
+		"position": "신입·경력",
+		"plan": "06/01~06/20",
+		"link": "/Company/1729980/Info",
+		"img": "https://imgs.jobkorea.co.kr/img1/_whitebg/200X80/Co_Logo/Logo/2005/4/2t7js005Rp_aK2l2v2yp0bsYvIf_sp.gif?v=202306021013&hash=r&serviceCode=CL"
+	},
+	"㈜신원": {
+		"state": "시작",
+		"content": "(주)신원 수출부문 경영관리 담당자 채용",
+		"position": "신입·경력",
+		"plan": "06/01~07/01",
+		"link": "/Company/1575959/Info",
+		"img": "https://imgs.jobkorea.co.kr/img1/_whitebg/200X80/Co_Logo/Logo/2022/11/09/JK_CO_UXaHaDN22110914290638.PNG?v=202306021013"
+	},
+	"㈜교보문고": {
+		"state": "시작",
+		"content": "㈜교보문고 [유통관리시스템 개발 및 운영] 신입사원 모집",
+		"position": "신입",
+		"plan": "06/01~07/01",
+		"link": "/Company/1679666/Info",
+		"img": "https://imgs.jobkorea.co.kr/img1/_whitebg/200X80/Co_Logo/Logo/2021/11/03/2538s008R-_2X9u6923521-0esY8U9_0-2s-.jpg?v=202306021013&hash=r&serviceCode=CL"
+	},
+	"㈜엔씨소프트": {
+		"state": "시작",
+		"content": "엔씨소프트 부문별 수시 채용",
+		"position": "신입·경력",
+		"plan": "06/01~06/30",
+		"link": "/Company/1926620/Info",
+		"img": "https://imgs.jobkorea.co.kr/img1/_whitebg/200X80/Co_Logo/Logo/2019/10/2w1kj007Pr_gWhi2c3x22r0djMnSf_2sjr.jpg?v=202306021013&hash=r&serviceCode=CL"
+	},
+	"㈜소노인터내셔널": {
+		"state": "시작",
+		"content": "대명 소노그룹 소노캄 고양 부문별 신입/경력 채용",
+		"position": "신입·경력",
+		"plan": "06/01~06/09",
+		"link": "/Company/1938839/Info",
+		"img": "https://imgs.jobkorea.co.kr/img1/_whitebg/200X80/Co_Logo/Logo/2023/5/09/JK_CO_rnefmu23050918154455.jpg?v=202306021014"
+	},
+	"캐논코리아(주)": {
+		"state": "시작",
+		"content": "캐논코리아 안산사업소 생산부문 대규모 채용",
+		"position": "경력무관",
+		"plan": "06/01~06/30",
+		"link": "/Company/1372431/Info",
+		"img": "https://imgs.jobkorea.co.kr/img1/_whitebg/200X80/Co_Logo/Logo/2021/11/23/2514e007P6_9W3h23362660deM6S0_03e6.jpg?v=202306021014&hash=r&serviceCode=CL"
+	},
+	"코리아e플랫폼㈜": {
+		"state": "시작",
+		"content": "2023년 코리아이플랫폼 신입 및 경력 사원 수시채용(구매팀 데일리소싱)",
+		"position": "신입·경력",
+		"plan": "06/01~06/16",
+		"link": "/Company/1501450/Info",
+		"img": "https://imgs.jobkorea.co.kr/img1/_whitebg/200X80/Co_Logo/Logo/2015/8/2w35m008Rw_dXfyfqc3e2ew0emYjUq_9x2mw.jpg?v=202306021014&hash=r&serviceCode=CL"
 	}
 }
