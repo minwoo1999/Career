@@ -200,7 +200,3 @@ public String getErrorPath() {
 
 [https://github.com/minwoo1999/CI-CD-pipeline](https://github.com/minwoo1999/CI-CD-pipeline)
 
-### 간단한 시연영상
-- 실제배포 : https://knu-carrer.org/
----
-[https://youtu.be/CmeHCtahMfU](https://youtu.be/CmeHCtahMfU)
