@@ -108,15 +108,8 @@
 
 ![image](https://user-images.githubusercontent.com/79193811/224347111-58d01daf-edad-4d6d-8eaf-9cfdb3aea7ed.png)
 
-### 🛠️ AWS Architecture V2
-
-![image](https://github.com/withcareer/backend_jobhunt/assets/79193811/0c5d2cee-c9d9-4b7e-8723-e10f0266e825)
-
-- EC2 Bastion Host
-- autoscaling (scale out)
-- loadbalancing
 - nginx 도입
-- route53 과 ACM을 통한 https 적용
+- route53 과 nginx을 통한 https 적용
 
 
 ### 📝 git action 을 통해 주기적으로 채용정보 수집
