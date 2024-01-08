@@ -153,38 +153,7 @@
 - Swagger API를 사용함으로써 API문서작성 방법을 터득하였습니다.
 - JWT에서 보안을 위해 **Refresh토큰값의 만료시간은 길고, access Token값의 만료시간은 짧게 설정하여 주기적으로 access token**값을 변경해야 한다는 것을 깨달았습니다.
 
-### 통합빌드하여 배포했을 경우 **발생한이슈**
 
----
-
-백엔드에서 React.js 라우터에 있는 주소로 주소를 임의 변경하면, 매핑되는 주소가 없으므로 404 오류가 생긴다. 이를 방지하기 위해 에러가 발생하면 프론트엔드에서 작성한 frontend/src/index.html을 전송한다는 것을 알게되었습니다.
-
-### 통합빌드하여 배포했을 경우 **이슈해결방안**
-
----
-
-백엔드에서는 생성된 index.html 연결이 되야한다.(에러처리시 index로 이동시키는 코드)
-
-```
-package com.devtest.devtest.controller;import org.springframework.boot.web.servlet.error.ErrorController;
-import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.GetMapping;@Controller
-public class WebController implements ErrorController {
-// 백엔드에서 React.js 라우터에 있는 주소로 주소를 임의 변경하면,
-// 매핑되는 주소가 없으므로 404 오류가 생긴다.
-// 이를 방지하기 위해 에러가 발생하면 프론트엔드에서 작성한 frontend/src/index.html을 전송한다.
-@GetMapping({ "/", "/error" })
-public String index() {
-return "index";
-}/*400에러 발생 시 getErrorPath() 호출*/
-public String getErrorPath() {
-    return "/error";
-}
-
-}
-```
-
-- https://github.com/minwoo1999/SpringBootReactApp
 
 
 ### CICD 링크
